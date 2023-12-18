@@ -1,0 +1,187 @@
+html{
+    font-family: 'Luxurious Roman', serif;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+    margin-bottom: 5px;
+    display: inline-block;
+    position: relative;
+}
+a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: blue;
+    position: absolute;
+    display: block;
+    /* animation-name: subrayadoLinks; */
+    /* animation-duration: .6s; */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s all;
+}
+a:hover::after{
+    /* content: ''; */
+    width: 100%;
+}
+@keyframes subrayadoLinks{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+header{
+    height: 100px;
+    background-color: #19054b;
+    color: white; 
+    text-align: center; 
+    padding-top: 20px; 
+    position: sticky; 
+    top: 0;
+}
+dt{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fa-star{
+    color: #ffc400;
+    font-size: 25px;
+}
+
+.datosPersonales{
+    display: flex; 
+    margin-top: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    justify-content: center;
+}
+
+.misDatos{
+    padding-right: 7px;
+}
+.cuadroFoto{
+    align-items: center; 
+    justify-content: end; 
+    object-fit: cover; 
+    object-position: top; 
+    padding: 5px 25px 0px 10px;
+}
+footer {
+    background-color: #19054b;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    background: #2980b9;
+    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+    background: linear-gradient(to right, #2c3e50, #2980b9); 
+    height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 960px;
+    width: 100%;
+    height: 100%;
+    background-color: white;    
+}
+section{
+    background-color: aliceblue; 
+    width: 90%; 
+    margin-top: 10px;
+    margin-bottom: 33px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    /* padding: 5px, 0, 10px, 20px; */  /*invalid property value!!! :O*/
+}
+.enColumnas{
+    display: flex;
+}
+
+.empresa{
+    margin: 25px 0px 5px 0px;
+    text-transform: uppercase;
+}
+
+.cargo{
+    margin: 0px;
+}
+
+.aptitud{
+    font-size: 14px;
+    font-weight: bold;
+}
+.tarea, .aptitud{
+    margin: 5px 0px 5px 0px;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.divExpPro{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 22px;
+}
+
+h2{
+    border-bottom: solid;
+    width: 97%;
+    padding-bottom: 10px;
+}
+
+.miFoto{
+    padding: 3px;
+    box-shadow: -1px 1px 5px rgba(0, 153, 204, 0.76), -1px 1px 11px rgba(110, 153, 204, 0.76);    
+    background-color: red;
+    padding:1px;
+    border-radius: 2em;
+}
+.miFoto:hover{
+    background-color: #ffc400;
+    padding: 3px;
+    border-radius: 50%;
+    animation: heartBeat;
+    animation-duration: 1.5s;
+}
+
+h1  {
+    margin: 5px 15px 0px 15px;
+}
+.tituloPrincipal{
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+}
+.tituloPrincipal:hover{
+    --opacity: 1;
+    color: yellow;
+    transition: 1.5s;
+    font-size: clamp(2rem, 5vw, 4.4rem);
+}
+.tituloPrincipal::after{
+    content: '';
+    height: 1px;
+    background-color: yellow;
+    opacity: var(--opacity,0);
+    position: absolute;
+    display: block;
+    width: 100%;
+    transition: 0.6s;
+    font-size: 100%;
+}
+
+.rebote {
+    animation: bounce;
+    animation-duration: 2s;
+}
