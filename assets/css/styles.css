@@ -7,14 +7,14 @@ a{
     color: blue;
     margin-bottom: 5px;
     display: inline-block;
-    position: relative;
+    position: static;
 }
 a::after{
     content: '';
     width: 0%;
     height: 1px;
     background-color: blue;
-    position: absolute;
+    position: relative;
     display: block;
     /* animation-name: subrayadoLinks; */
     /* animation-duration: .6s; */
